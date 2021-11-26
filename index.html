@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NCB</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Heebo:wght@100;200;300;400;500;700;800;900&family=Patua+One&display=swap"
+		rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
+	<link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+	<style>
+		body {
+			overflow: hidden;
+		}
+
+		th,
+		td {
+			padding: 10px 20px !important;
+			font-family: 'Heebo', sans-serif;
+			text-align: left;
+		}
+
+		td {
+			padding: 6px 20px !important;
+			font-family: 'Heebo', sans-serif;
+			font-size: 23px;
+			color: #000;
+			font-weight: 500;
+			text-align: left;
+		}
+
+		.booked {
+			color: #e30016;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.available {
+			color: #06be1a;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		.fixed {
+			top: 0;
+			position: fixed;
+			width: auto;
+			display: none;
+			border: none;
+		}
+
+		.header_div {
+			display: block;
+			text-align: left;
+			padding: 10px 0;
+			/*	background: #eee;*/
+		}
+
+		.header_div img {
+			width: 65%;
+			margin-right: 0;
+			margin-left: auto;
+			display: block;
+		}
+
+		.header_div h2 {
+			font-size: 40px;
+			font-weight: 800;
+			margin-bottom: 0;
+			font-family: 'Fira Sans Condensed', sans-serif;
+			margin-top: 0;
+		}
+
+		.header_div h5 {
+			font-family: 'Heebo', sans-serif;
+			font-size: 30px;
+			margin-top: 6px;
+			color: #e30016;
+			font-weight: 900;
+		}
+
+		.right_div {
+			position: relative;
+			top: 4px;
+		}
+
+		.table-striped>tbody>tr:nth-of-type(odd) {
+			background-color: #fdebec;
+		}
+
+		.table-bordered>tbody>tr>td,
+		.table-bordered>tbody>tr>th {
+			border-color: #e3001633;
+
+		}
+
+		.tabelaBody {
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.table {
+			margin-bottom: 0px;
+		}
+
+		.blue>thead>tr>th,
+		.blue>tbody>tr>td {
+			width: 25%;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="header_div">
+			<div class="container">
+				<div class="row" style=" margin-left: 100px; ">
+					<div class="col-lg-2"><img src="logo.png"></div>
+					<div class="col-lg-10">
+						<div class="right_div">
+							<h2>NCB LOCO RUNNING ROOM BOOKING</h2>
+							<h5>ROOM STATUS</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<table class="table table-bordered table-striped blue container-fluid">
+			<thead>
+				<tr style="background-color: #e30016;color: #fff;font-size: 19px;">
+					<th><i class="fas fa-hotel"></i> Running Room</th>
+					<th><i class="fas fa-hotel"></i> Room Number</th>
+					<th><i class="fas fa-hotel"></i> Cabin</th>
+					<th style="text-align: center;"><i class="fas fa-check"></i> / <i class="fas fa-times"></i> Status
+					</th>
+				</tr>
+			</thead>
+		</table>
+
+
+		<div class="container-fluid">
+			<div id="custom_carousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<div class="item active">
+						<table class="table table-bordered table-striped blue">
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>101</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>10</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>11</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>12</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>13</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>14</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>15</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>16</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>17</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								
+
+							</tbody>
+
+						</table>
+					</div>
+					<div class="item">
+						<table class="table table-bordered table-striped blue">
+							<tbody>
+								<tr>
+									<td>11</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>12</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>13</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>14</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>15</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>16</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>17</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>18</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>19</td>
+									<td>101</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>20</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>11</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i>
+											Booked
+									</td>
+								</tr>
+								<tr>
+									<td>12</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>13</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>14</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>15</td>
+									<td>102</td>
+									<td>102</td>
+									<td style="text-align: center;"><span class="available"><i
+												class="fas fa-check-circle"></i>
+											Available</td>
+								</tr>
+								<tr>
+									<td>16</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								<tr>
+									<td>17</td>
+									<td>102</td>
+									<td>101</td>
+									<td style="text-align: center;"><span class="booked"><i
+												class="fas fa-times-circle"></i> Booked
+									</td>
+								</tr>
+								
+
+							</tbody>
+						</table>
+
+					</div>
+
+					<!-- End Item -->
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+	<script>
+		$(document).ready(function (ev) {
+			$('#custom_carousel').on('slide.bs.carousel', function (evt) {
+				$('#custom_carousel .controls li.active').removeClass('active');
+				$('#custom_carousel .controls li:eq(' + $(evt.relatedTarget).index() + ')').addClass('active');
+			})
+		});
+
+		$('.carousel').carousel({
+			interval: 5000
+		})
+	</script>
+
+
+
+
+	<script src="jquery.min.js"></script>
+
+
+</body>
+
+</html>
